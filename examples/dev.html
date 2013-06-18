@@ -23,6 +23,7 @@
 		<script src="./../modules/example5.js"></script>
 		<script src="./../modules/math_clipboard.js"></script>
 	        <script src="./../modules/ZeroClipboard.js"></script>
+	        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
 
 		<script type="text/javascript">
 			var JOBAD1, JOBAD2;
@@ -127,15 +128,26 @@
 				Phasellus tempus pharetra nunc ut venenatis. Suspendisse in velit velit. Cras quam tortor, porta nec fermentum sed, varius nec nulla. Praesent imperdiet, nibh nec mattis dignissim, urna elit convallis risus, ac eleifend ipsum enim a dui. Nam at augue enim, placerat bibendum justo. Suspendisse et justo erat. Nullam quam enim, tempor sit amet venenatis eget, aliquet sit amet elit.
 			</p>
 		</div>
-			<script type="text/javascript">
-	   ZeroClipboard.setDefaults({ moviePath: 'htmlpreview.github?https://github.com/jwilliams5/jobad/master/examples/dev.html/ZeroClipboard.swf'});
-	   var clip = new ZeroClipboard($('#b1'));
-	    clip.on( 'mousedown', function ( client, args ) {
-	       alert( "mouse button is down" );
-	   });
-	   clip.on('complete', function(client, args){
-	       alert("Copied text to clipboard: " + args.text);
-	   });
-	</script>	  
+			   <script type="text/javascript">
+        window.addEvent("load",function() {
+
+			setTimeout(function() {
+				
+				ZeroClipboard.setMoviePath('ZeroClipboard.swf');
+			
+				var clip = new ZeroClipboard.Client();
+			
+				clip.addEventListener('mousedown',function() {
+					clip.setText(document.getElementById('txt1').value);
+				});
+
+				clip.addEventListener('complete',function(client,text) {
+					alert('copied: ' + text);
+				});
+			
+				clip.glue('b1');
+			}, 2000);
+		});
+	   </script>
 	</body>
 </html>

@@ -1,6 +1,6 @@
 // Simple Set Clipboard System
 // Author: Joseph Huckaby
-
+//yay
 var ZeroClipboard = {
   
   version: "1.0.4",

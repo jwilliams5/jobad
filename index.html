@@ -56,6 +56,28 @@
 				JOBAD2.Setup();
 			})		
 		</script>
+		<script type= "text/javascript"src="ZeroClipboard.js"></script>
+		<script type="text/javascript">
+        		window.addEvent("load",function() {
+
+			setTimeout(function() {
+
+				ZeroClipboard.setMoviePath('ZeroClipboard.swf');
+
+				var clip = new ZeroClipboard.Client();
+
+				clip.addEventListener('mousedown',function() {
+					clip.setText(document.getElementById('txt1').value);
+				});
+
+				clip.addEventListener('complete',function(client,text) {
+					alert('copied: ' + text);
+				});
+
+				clip.glue('b1');
+			}, 2000);
+		});
+	   </script>
 	</head>
 	<body>
 		<h1>JOBAD (Instance 1)</h1>
@@ -197,27 +219,5 @@
 				Phasellus tempus pharetra nunc ut venenatis. Suspendisse in velit velit. Cras quam tortor, porta nec fermentum sed, varius nec nulla. Praesent imperdiet, nibh nec mattis dignissim, urna elit convallis risus, ac eleifend ipsum enim a dui. Nam at augue enim, placerat bibendum justo. Suspendisse et justo erat. Nullam quam enim, tempor sit amet venenatis eget, aliquet sit amet elit.
 			</p>
 		</div>
-		<script type= "text/javascript"src="ZeroClipboard.js"></script>
-		<script type="text/javascript">
-        		window.addEvent("load",function() {
-
-			setTimeout(function() {
-
-				ZeroClipboard.setMoviePath('ZeroClipboard.swf');
-
-				var clip = new ZeroClipboard.Client();
-
-				clip.addEventListener('mousedown',function() {
-					clip.setText(document.getElementById('txt1').value);
-				});
-
-				clip.addEventListener('complete',function(client,text) {
-					alert('copied: ' + text);
-				});
-
-				clip.glue('b1');
-			}, 2000);
-		});
-	   </script>
 	</body>
 </html>

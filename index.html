@@ -65,9 +65,12 @@
 				ZeroClipboard.setMoviePath('ZeroClipboard.swf');
 
 				var clip = new ZeroClipboard.Client();
-
+				
+				alert('inside js flie');
+				
 				clip.addEventListener('mousedown',function() {
 					clip.setText(document.getElementById('txt1').value);
+					alert('mouse is down!!');
 				});
 
 				clip.addEventListener('complete',function(client,text) {

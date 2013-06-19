@@ -1,71 +1,153 @@
-<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Jobad by jwilliams5</title>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"> 
+		<title>JOBAD v3 (CHAOS) Example Page</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Jobad</h1>
-        <p>JOBAD is a javascript framework which makes it easy to create interactive web pages. </p>
-
-        <p class="view"><a href="https://github.com/jwilliams5/jobad">View the Project on GitHub <small>jwilliams5/jobad</small></a></p>
+		<script src="./../js/deps/jquery/jquery-1.9.1.min.js"></script>
+		<script src="./../js/deps/jquery/jquery-ui-1.10.1.js"></script>
+		<script src="./../js/deps/underscore/underscore-min.js"></script>
+		<link href="./../css/jquery-ui-1.10.1.min.css" rel="stylesheet">
 
 
-        <ul>
-          <li><a href="https://github.com/jwilliams5/jobad/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/jwilliams5/jobad/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/jwilliams5/jobad">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+		<script src="./../build/release/JOBAD.js"></script>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+		<link href="./../css/JOBAD.css" rel="stylesheet">
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+		<!-- Load all the modules -->
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+		<script src="./../modules/example1.js"></script>
+		<script src="./../modules/example2.js"></script>
+		<script src="./../modules/example3.js"></script>
+		<script src="./../modules/example4.js"></script>
+		<script src="./../modules/example5.js"></script>
+		<script src="./../modules/math_clipboard.js"></script>
+	        <script src="./../modules/ZeroClipboard.js"></script>
+	        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+		<script type="text/javascript">
+			var JOBAD1, JOBAD2;
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+			JOBAD.noConflict._(); //prevent underscore conflicts
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+			jQuery(function(){	
+				JOBAD1 = new JOBAD(jQuery("#1"));
+				JOBAD2 = new JOBAD(jQuery("#2"));
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+				JOBAD1.modules.load('test.color.click', ['green']);
+				JOBAD1.modules.load('test.color.hover', []);
+				JOBAD1.modules.load('test.color.menu', []);
+				JOBAD1.modules.load('test.p', []);
+				JOBAD1.modules.load('test.math.clip', []);
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+				JOBAD2.modules.load('test.color.click', ['blue']);
+				JOBAD2.modules.load('test.color.hover', []);
+				JOBAD2.modules.load('test.color.menu', []);
+				JOBAD2.modules.load('test.sidebar', []);
+				JOBAD2.modules.load('test.p', []);
+				JOBAD2.modules.load('test.math.clip', []);				
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/jwilliams5">jwilliams5</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+				JOBAD1.Setup();
+				JOBAD2.Setup();
+			})		
+		</script>
+	</head>
+	<body>
+		<h1>JOBAD (Instance 1)</h1>
+		<div id='1'>
+			<div id='3'>
+				<b>No tooltip, just a menu.  </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum, velit molestie eleifend tincidunt, neque metus facilisis nunc, vitae euismod mi neque nec erat. Proin luctus lacinia nisl vel commodo. Integer aliquam erat massa. Pellentesque semper neque vel diam tincidunt luctus dignissim lorem mollis. Donec dui dui, consequat non suscipit et, porttitor nec enim. Sed augue lorem, commodo a mollis eget, scelerisque quis urna. Phasellus ac erat urna, non luctus est. Proin eu mauris dolor, ut pulvinar ipsum. In hac habitasse platea dictumst. Donec eros odio, vulputate id placerat et, venenatis consectetur magna.
+				<p id='4'>
+					<b>A menu and a tooltip. </b>Hello WORLD. I am a subparagraph
+				</p>
+			</div>
+			<p>
+				<b>A menu and a tooltip. </b>Ut dolor est, pellentesque eu posuere et, faucibus non libero. Vestibulum sit amet augue a urna sagittis fermentum ultricies quis tortor. Aenean lacinia, arcu at bibendum fringilla, nisl sapien ultricies felis, vehicula consequat nisl enim vel mauris. Fusce tempus, velit eget porta placerat, orci arcu aliquam felis, ut vulputate magna erat ac nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris diam arcu, tempor a tempor at, pulvinar et justo. Nulla eu massa mi. Nunc id diam in arcu luctus facilisis at quis dolor. Aenean id diam orci, at elementum tellus. Donec id nisl nisi.
+			</p>
+			<p>
+				<b>A menu and a tooltip. </b>Donec vitae arcu eu sapien cursus adipiscing vitae vel ipsum. Suspendisse viverra malesuada massa non molestie. Donec consectetur, tellus at condimentum congue, nibh odio cursus magna, eget bibendum lacus augue eu elit. Suspendisse pellentesque, quam ut feugiat rhoncus, orci massa tempus libero, et rhoncus lacus felis at nisi. Curabitur sollicitudin nunc at lectus fringilla iaculis. In commodo porta est nec pharetra. Sed eget nisi sem, ac ornare ante. Suspendisse potenti. Suspendisse sed luctus lorem. Nulla facilisi. Integer iaculis blandit eleifend.
+			</p>
+			<p>
+				<b>A menu and a tooltip. </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id massa eget elit condimentum fringilla. Nam malesuada odio eu tortor condimentum id aliquam elit tincidunt. Sed sit amet dolor non lorem interdum interdum eget id dolor. Maecenas congue lectus quis purus ultrices ut interdum enim consectetur. Nunc venenatis neque vitae lacus fringilla mollis. Morbi augue felis, dapibus at ultricies et, tincidunt vel velit. Morbi nisi purus, bibendum eget dapibus elementum, dictum nec diam. Proin ac elit massa, non sollicitudin justo. Etiam id risus mi, at interdum mi. Pellentesque et malesuada enim. Aliquam eros massa, eleifend aliquam feugiat ut, tincidunt quis urna. Vestibulum vehicula dolor eu augue lobortis cursus. Cras vitae urna nulla. Duis placerat orci et dolor egestas vulputate. Donec sed orci augue.
+			</p>
+			<p id='nomenu'>
+				<b>No menu at all. </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id massa eget elit condimentum fringilla. Nam malesuada odio eu tortor condimentum id aliquam elit tincidunt. Sed sit amet dolor non lorem interdum interdum eget id dolor. Maecenas congue lectus quis purus ultrices ut interdum enim consectetur. Nunc venenatis neque vitae lacus fringilla mollis. Morbi augue felis, dapibus at ultricies et, tincidunt vel velit. Morbi nisi purus, bibendum eget dapibus elementum, dictum nec diam. Proin ac elit massa, non sollicitudin justo. Etiam id risus mi, at interdum mi. Pellentesque et malesuada enim. Aliquam eros massa, eleifend aliquam feugiat ut, tincidunt quis urna. Vestibulum vehicula dolor eu augue lobortis cursus. Cras vitae urna nulla. Duis placerat orci et dolor egestas vulputate. Donec sed orci augue.
+			</p>
+		</div>
+		<h1>JOBAD (Instance 2)</h1>
+		<b>All of these have a tooltip and a menu. </b>
+		<div id='2'>
+			<p>
+				Aenean porta porttitor enim, ut tristique turpis vestibulum nec. Mauris volutpat consectetur sem at ornare. Morbi id lorem eu nunc dapibus faucibus eget malesuada erat. Ut in ligula turpis. Proin cursus consequat imperdiet. Cras vitae nisl massa, eu rhoncus eros. Suspendisse lacinia libero vitae ante euismod sit amet volutpat ante gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae eros dui, sed ultrices diam.Aenean porta porttitor enim, ut tristique turpis vestibulum nec. Mauris volutpat consectetur sem at ornare. Morbi id lorem eu nunc dapibus faucibus eget malesuada erat. Ut in ligula turpis. Proin cursus consequat imperdiet. Cras vitae nisl massa, eu rhoncus eros. Suspendisse lacinia libero vitae ante euismod sit amet volutpat ante gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae eros dui, sed ultrices diam.Aenean porta porttitor enim, ut tristique turpis vestibulum nec. Mauris volutpat consectetur sem at ornare. Morbi id lorem eu nunc dapibus faucibus eget malesuada erat. Ut in ligula turpis. Proin cursus consequat imperdiet. Cras vitae nisl massa, eu rhoncus eros. Suspendisse lacinia libero vitae ante euismod sit amet volutpat ante gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae eros dui, sed ultrices diam.Aenean porta porttitor enim, ut tristique turpis vestibulum nec. Mauris volutpat consectetur sem at ornare. Morbi id lorem eu nunc dapibus faucibus eget malesuada erat. Ut in ligula turpis. Proin cursus consequat imperdiet. Cras vitae nisl massa, eu rhoncus eros. Suspendisse lacinia libero vitae ante euismod sit amet volutpat ante gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae eros dui, sed ultrices diam.
+			</p>
+			<div id="S3.p2" class="ltx_para">
+<p id="S3.p2.1" class="ltx_p">The probability of getting <math id="S3.p2.1.m1.1" class="ltx_Math" alttext="\(k\)" display="inline" xref="S3.p2.1.m1.1.cmml"><semantics id="S3.p2.1.m1.1a" xref="S3.p2.1.m1.1.cmml"><mi id="S3.p2.1.m1.1.1.m1.1.1" xref="S3.p2.1.m1.1.1.m1.1.1.cmml">k</mi><annotation-xml id="S3.p2.1.m1.1.cmml" encoding="MathML-Content" xref="S3.p2.1.m1.1"><ci id="S3.p2.1.m1.1.1.m1.1.1.cmml" xref="S3.p2.1.m1.1.1.m1.1.1">k</ci></annotation-xml><annotation id="S3.p2.1.m1.1b" encoding="application/x-tex" xref="S3.p2.1.m1.1.cmml">\(k\)</annotation></semantics></math> heads when flipping <math id="S3.p2.1.m2.1" class="ltx_Math" alttext="\(n\)" display="inline" xref="S3.p2.1.m2.1.cmml"><semantics id="S3.p2.1.m2.1a" xref="S3.p2.1.m2.1.cmml"><mi id="S3.p2.1.m2.1.1.m1.1.1" xref="S3.p2.1.m2.1.1.m1.1.1.cmml">n</mi><annotation-xml id="S3.p2.1.m2.1.cmml" encoding="MathML-Content" xref="S3.p2.1.m2.1"><ci id="S3.p2.1.m2.1.1.m1.1.1.cmml" xref="S3.p2.1.m2.1.1.m1.1.1">n</ci></annotation-xml><annotation id="S3.p2.1.m2.1b" encoding="application/x-tex" xref="S3.p2.1.m2.1.cmml">\(n\)</annotation></semantics></math> coins is:</p>
+<table id="S3.Ex4" class="ltx_equation">
+
+<tbody><tr class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_pad"></td>
+<td class="ltx_align_center"><math id="S3.Ex4.m1.1" class="ltx_Math" alttext="P(E)={n\choose k}p^{k}(1-p)^{{n-k}}" display="block" xref="S3.Ex4.m1.1.cmml"><semantics id="S3.Ex4.m1.1a" xref="S3.Ex4.m1.1.cmml"><mrow id="S3.Ex4.m1.1.15" xref="S3.Ex4.m1.1.15.cmml"><mrow id="S3.Ex4.m1.1.15.1" xref="S3.Ex4.m1.1.15.1.cmml"><mi id="S3.Ex4.m1.1.1" xref="S3.Ex4.m1.1.1.cmml">P</mi><mo id="S3.Ex4.m1.1.15.1.1" xref="S3.Ex4.m1.1.15.1.1.cmml">⁢</mo><mrow id="S3.Ex4.m1.1.3" xref="S3.Ex4.m1.1.3.cmml"><mo id="S3.Ex4.m1.1.3a" xref="S3.Ex4.m1.1.3.cmml">(</mo><mi id="S3.Ex4.m1.1.3b" xref="S3.Ex4.m1.1.3.cmml">E</mi><mo id="S3.Ex4.m1.1.3c" xref="S3.Ex4.m1.1.3.cmml">)</mo></mrow></mrow><mo id="S3.Ex4.m1.1.5" xref="S3.Ex4.m1.1.5.cmml">=</mo><mrow id="S3.Ex4.m1.1.15.2" xref="S3.Ex4.m1.1.15.2.cmml"><mrow id="S3.Ex4.m1.1.6" xref="S3.Ex4.m1.1.6.cmml"><mo id="S3.Ex4.m1.1.6a" xref="S3.Ex4.m1.1.6.cmml">(</mo><mtable rowspacing="0.2ex" id="S3.Ex4.m1.1.6b" columnspacing="0.4em" xref="S3.Ex4.m1.1.6.cmml"><mtr id="S3.Ex4.m1.1.6c" xref="S3.Ex4.m1.1.6.cmml"><mtd id="S3.Ex4.m1.1.6d" xref="S3.Ex4.m1.1.6.cmml"><mi id="S3.Ex4.m1.1.6.2" xref="S3.Ex4.m1.1.6.2.cmml">n</mi></mtd></mtr><mtr id="S3.Ex4.m1.1.6e" xref="S3.Ex4.m1.1.6.cmml"><mtd id="S3.Ex4.m1.1.6f" xref="S3.Ex4.m1.1.6.cmml"><mi id="S3.Ex4.m1.1.6.3" xref="S3.Ex4.m1.1.6.3.cmml">k</mi></mtd></mtr></mtable><mo id="S3.Ex4.m1.1.6g" xref="S3.Ex4.m1.1.6.cmml">)</mo></mrow><mo id="S3.Ex4.m1.1.15.2.1" xref="S3.Ex4.m1.1.15.2.1.cmml">⁢</mo><msup id="S3.Ex4.m1.1.15.2.2" xref="S3.Ex4.m1.1.15.2.2.cmml"><mi id="S3.Ex4.m1.1.7" xref="S3.Ex4.m1.1.7.cmml">p</mi><mi id="S3.Ex4.m1.1.8.1" xref="S3.Ex4.m1.1.8.1.cmml">k</mi></msup><mo id="S3.Ex4.m1.1.15.2.1a" xref="S3.Ex4.m1.1.15.2.1.cmml">⁢</mo><msup id="S3.Ex4.m1.1.15.2.3" xref="S3.Ex4.m1.1.15.2.3.cmml"><mrow id="S3.Ex4.m1.1.15.2.3.2" xref="S3.Ex4.m1.1.15.2.3.2.cmml"><mo id="S3.Ex4.m1.1.15.2.3.2a" xref="S3.Ex4.m1.1.15.2.3.2.cmml">(</mo><mrow id="S3.Ex4.m1.1.15.2.3.2b" xref="S3.Ex4.m1.1.15.2.3.2.cmml"><mn id="S3.Ex4.m1.1.10" xref="S3.Ex4.m1.1.10.cmml">1</mn><mo id="S3.Ex4.m1.1.11" xref="S3.Ex4.m1.1.11.cmml">-</mo><mi id="S3.Ex4.m1.1.12" xref="S3.Ex4.m1.1.12.cmml">p</mi></mrow><mo id="S3.Ex4.m1.1.15.2.3.2c" xref="S3.Ex4.m1.1.15.2.3.2.cmml">)</mo></mrow><mrow id="S3.Ex4.m1.1.14.1" xref="S3.Ex4.m1.1.14.1.cmml"><mi id="S3.Ex4.m1.1.14.1.1" xref="S3.Ex4.m1.1.14.1.1.cmml">n</mi><mo id="S3.Ex4.m1.1.14.1.2" xref="S3.Ex4.m1.1.14.1.2.cmml">-</mo><mi id="S3.Ex4.m1.1.14.1.3" xref="S3.Ex4.m1.1.14.1.3.cmml">k</mi></mrow></msup></mrow></mrow><annotation-xml id="S3.Ex4.m1.1.cmml" encoding="MathML-Content" xref="S3.Ex4.m1.1"><apply id="S3.Ex4.m1.1.15.cmml" xref="S3.Ex4.m1.1.15"><eq id="S3.Ex4.m1.1.5.cmml" xref="S3.Ex4.m1.1.5"></eq><apply id="S3.Ex4.m1.1.15.1.cmml" xref="S3.Ex4.m1.1.15.1"><times id="S3.Ex4.m1.1.15.1.1.cmml" xref="S3.Ex4.m1.1.15.1.1"></times><ci id="S3.Ex4.m1.1.1.cmml" xref="S3.Ex4.m1.1.1">P</ci><ci id="S3.Ex4.m1.1.3.cmml" xref="S3.Ex4.m1.1.3">E</ci></apply><apply id="S3.Ex4.m1.1.15.2.cmml" xref="S3.Ex4.m1.1.15.2"><times id="S3.Ex4.m1.1.15.2.1.cmml" xref="S3.Ex4.m1.1.15.2.1"></times><apply id="S3.Ex4.m1.1.6.cmml" xref="S3.Ex4.m1.1.6"><csymbol cd="latexml" id="S3.Ex4.m1.1.6.1.cmml">binomial</csymbol><ci id="S3.Ex4.m1.1.6.2.cmml" xref="S3.Ex4.m1.1.6.2">n</ci><ci id="S3.Ex4.m1.1.6.3.cmml" xref="S3.Ex4.m1.1.6.3">k</ci></apply><apply id="S3.Ex4.m1.1.15.2.2.cmml" xref="S3.Ex4.m1.1.15.2.2"><csymbol cd="ambiguous" id="S3.Ex4.m1.1.15.2.2.1.cmml">superscript</csymbol><ci id="S3.Ex4.m1.1.7.cmml" xref="S3.Ex4.m1.1.7">p</ci><ci id="S3.Ex4.m1.1.8.1.cmml" xref="S3.Ex4.m1.1.8.1">k</ci></apply><apply id="S3.Ex4.m1.1.15.2.3.cmml" xref="S3.Ex4.m1.1.15.2.3"><csymbol cd="ambiguous" id="S3.Ex4.m1.1.15.2.3.1.cmml">superscript</csymbol><apply id="S3.Ex4.m1.1.15.2.3.2.cmml" xref="S3.Ex4.m1.1.15.2.3.2"><minus id="S3.Ex4.m1.1.11.cmml" xref="S3.Ex4.m1.1.11"></minus><cn type="integer" id="S3.Ex4.m1.1.10.cmml" xref="S3.Ex4.m1.1.10">1</cn><ci id="S3.Ex4.m1.1.12.cmml" xref="S3.Ex4.m1.1.12">p</ci></apply><apply id="S3.Ex4.m1.1.14.1.cmml" xref="S3.Ex4.m1.1.14.1"><minus id="S3.Ex4.m1.1.14.1.2.cmml" xref="S3.Ex4.m1.1.14.1.2"></minus><ci id="S3.Ex4.m1.1.14.1.1.cmml" xref="S3.Ex4.m1.1.14.1.1">n</ci><ci id="S3.Ex4.m1.1.14.1.3.cmml" xref="S3.Ex4.m1.1.14.1.3">k</ci></apply></apply></apply></apply></annotation-xml><annotation id="S3.Ex4.m1.1b" encoding="application/x-tex" xref="S3.Ex4.m1.1.cmml">P(E)={n\choose k}p^{k}(1-p)^{{n-k}}</annotation></semantics></math></td>
+<td class="ltx_eqn_pad"></td></tr>
+</tbody></table>
+</div>
+
+	<p> 
+			     <table>
+			       <tr>
+				 <td> <math xmls= "http://www.w3.org/1998/Math/MathML" display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>+</mo></mrow><mo>)</mo></mrow></mrow><mo>≡</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mrow><mi>c</mi><mo>+</mo></mrow></mrow></munder><mo>⁡</mo><mrow><mi>f</mi><mo>⁡</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁡</mo><mrow><mo>(</mo><mi>c</mi><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+			       </table>
+			</p>
+
+
+			 	<textarea id="txt1" rows="5" cols="40">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</textarea>
+        </br>
+	<button id="b1" data-clipboard-target="txt1">Copy</button>
+
+</br>
+</br>
+			<p>
+				Donec cursus neque quis eros tristique facilisis molestie sem consectetur. Pellentesque ut tortor erat, non semper nunc. Phasellus et nibh leo, a posuere ante. In laoreet purus vel nulla mattis id placerat enim rhoncus. Duis quam mi, laoreet quis ullamcorper eu, dignissim sit amet odio. Fusce accumsan mollis augue, facilisis vestibulum mi sodales ut. Nullam ligula libero, tempus ut tempus non, vestibulum ac urna. Phasellus faucibus imperdiet urna, et ullamcorper nisi ultrices vel. Etiam mollis est nibh.
+			</p>
+			<p>
+				Aenean malesuada erat vel neque ullamcorper non luctus lacus rhoncus. Sed diam tortor, pretium eget vehicula non, pellentesque nec lacus. Ut volutpat consectetur nibh id pulvinar. Sed elit magna, feugiat in lobortis ac, suscipit sit amet arcu. Aliquam id nisi in risus tempus tincidunt. Donec lectus risus, dictum sit amet sagittis vitae, dictum ultrices lectus. Sed non diam non risus convallis rhoncus id eget nisl. Donec ligula sapien, dignissim eu imperdiet eget, consectetur ut urna. Suspendisse potenti. Pellentesque posuere augue nec quam porttitor sodales. Donec erat nulla, aliquet vitae ornare ac, vehicula id augue. Sed feugiat volutpat quam hendrerit consequat. Quisque a lorem odio, in facilisis dolor. Duis commodo consequat risus, vel pellentesque sem porta non.
+			</p>
+			<p>
+				Quisque ut libero lorem, cursus ornare elit. Curabitur interdum, neque a fermentum auctor, nulla metus laoreet lectus, vitae elementum dolor lectus vel nunc. Nullam eget turpis urna. Aenean ac bibendum ipsum. Proin purus nisl, fermentum ut sagittis dignissim, dapibus ut metus. Suspendisse potenti. Sed elementum diam a dolor posuere lobortis ultrices ante rutrum. Maecenas ac diam in dui auctor venenatis eget vitae neque. In suscipit consectetur elementum. Nam eu elit semper metus consequat bibendum ac non nulla. Maecenas sed mollis velit. Donec vitae tellus eros. Curabitur vestibulum nunc et felis tristique ullamcorper aliquet lorem placerat. Duis malesuada, tellus non suscipit lacinia, leo augue consequat sem, eu lobortis dui felis eget magna.
+			</p>
+			<p>
+				Vestibulum vestibulum est at turpis consequat at ultrices risus lacinia. Quisque accumsan libero at dui vestibulum gravida. Ut tincidunt dui ac lacus ullamcorper eget mollis felis blandit. Donec rutrum aliquet velit, vitae porta eros consectetur eu. In luctus consectetur egestas. Pellentesque nec libero at dui tristique ornare. Nam non ultrices felis. Duis molestie mattis augue in venenatis. Morbi ut tellus velit, a rutrum nisl. Maecenas ac imperdiet quam. Quisque orci est, fringilla sed viverra ut, bibendum id ligula. Morbi at lectus magna, vel mattis orci. Maecenas dictum malesuada dolor, sed porta lacus egestas quis. Mauris ornare leo ac odio interdum suscipit. In imperdiet commodo elit, eu congue augue pretium sit amet. Praesent posuere fringilla nisl vel consequat.
+			</p>
+		</div>
+		<h1>No JOBAD below this line</h1>
+			<p>
+				In hac habitasse platea dictumst. Curabitur laoreet est in tortor vestibulum sed lacinia nibh aliquet. Maecenas facilisis posuere eros in consectetur. Donec sed posuere diam. Proin erat justo, viverra vel rhoncus eget, pulvinar elementum dui. Cras ut lorem quam. In cursus, ipsum in viverra commodo, lectus orci pretium neque, ut dignissim lectus ligula quis nunc.
+			</p>
+			<p>
+				Phasellus tempus pharetra nunc ut venenatis. Suspendisse in velit velit. Cras quam tortor, porta nec fermentum sed, varius nec nulla. Praesent imperdiet, nibh nec mattis dignissim, urna elit convallis risus, ac eleifend ipsum enim a dui. Nam at augue enim, placerat bibendum justo. Suspendisse et justo erat. Nullam quam enim, tempor sit amet venenatis eget, aliquet sit amet elit.
+			</p>
+		</div>
+			   <script type="text/javascript">
+        window.addEvent("load",function() {
+
+			setTimeout(function() {
+
+				ZeroClipboard.setMoviePath('ZeroClipboard.swf');
+
+				var clip = new ZeroClipboard.Client();
+
+				clip.addEventListener('mousedown',function() {
+					clip.setText(document.getElementById('txt1').value);
+				});
+
+				clip.addEventListener('complete',function(client,text) {
+					alert('copied: ' + text);
+				});
+
+				clip.glue('b1');
+			}, 2000);
+		});
+	   </script>
+	</body>
 </html>

@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8"> 
 		<title>JOBAD v3 (CHAOS) Example Page</title>
 
 		<script src="./../js/deps/jquery/jquery-1.9.1.min.js"></script>
@@ -8,7 +9,7 @@
 		<link href="./../css/jquery-ui-1.10.1.min.css" rel="stylesheet">
 
 
-		<script src="./../build/release/JOBAD.min.js"></script>
+		<script src="./../build/release/JOBAD.js"></script>
 
 		<link href="./../css/JOBAD.css" rel="stylesheet">
 
@@ -20,6 +21,9 @@
 		<script src="./../modules/example3.js"></script>
 		<script src="./../modules/example4.js"></script>
 		<script src="./../modules/example5.js"></script>
+		<script src="./../modules/math_clipboard.js"></script>
+	        <script src="./../modules/ZeroClipboard.js"></script>
+	        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
 
 		<script type="text/javascript">
 			var JOBAD1, JOBAD2;
@@ -34,14 +38,15 @@
 				JOBAD1.modules.load('test.color.hover', []);
 				JOBAD1.modules.load('test.color.menu', []);
 				JOBAD1.modules.load('test.p', []);
+				JOBAD1.modules.load('test.math.clip', []);
 
-				
+
 				JOBAD2.modules.load('test.color.click', ['blue']);
 				JOBAD2.modules.load('test.color.hover', []);
 				JOBAD2.modules.load('test.color.menu', []);
 				JOBAD2.modules.load('test.sidebar', []);
 				JOBAD2.modules.load('test.p', []);
-				
+				JOBAD2.modules.load('test.math.clip', []);				
 
 				JOBAD1.Setup();
 				JOBAD2.Setup();
@@ -76,6 +81,32 @@
 			<p>
 				Aenean porta porttitor enim, ut tristique turpis vestibulum nec. Mauris volutpat consectetur sem at ornare. Morbi id lorem eu nunc dapibus faucibus eget malesuada erat. Ut in ligula turpis. Proin cursus consequat imperdiet. Cras vitae nisl massa, eu rhoncus eros. Suspendisse lacinia libero vitae ante euismod sit amet volutpat ante gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae eros dui, sed ultrices diam.Aenean porta porttitor enim, ut tristique turpis vestibulum nec. Mauris volutpat consectetur sem at ornare. Morbi id lorem eu nunc dapibus faucibus eget malesuada erat. Ut in ligula turpis. Proin cursus consequat imperdiet. Cras vitae nisl massa, eu rhoncus eros. Suspendisse lacinia libero vitae ante euismod sit amet volutpat ante gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae eros dui, sed ultrices diam.Aenean porta porttitor enim, ut tristique turpis vestibulum nec. Mauris volutpat consectetur sem at ornare. Morbi id lorem eu nunc dapibus faucibus eget malesuada erat. Ut in ligula turpis. Proin cursus consequat imperdiet. Cras vitae nisl massa, eu rhoncus eros. Suspendisse lacinia libero vitae ante euismod sit amet volutpat ante gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae eros dui, sed ultrices diam.Aenean porta porttitor enim, ut tristique turpis vestibulum nec. Mauris volutpat consectetur sem at ornare. Morbi id lorem eu nunc dapibus faucibus eget malesuada erat. Ut in ligula turpis. Proin cursus consequat imperdiet. Cras vitae nisl massa, eu rhoncus eros. Suspendisse lacinia libero vitae ante euismod sit amet volutpat ante gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae eros dui, sed ultrices diam.
 			</p>
+			<div id="S3.p2" class="ltx_para">
+<p id="S3.p2.1" class="ltx_p">The probability of getting <math id="S3.p2.1.m1.1" class="ltx_Math" alttext="\(k\)" display="inline" xref="S3.p2.1.m1.1.cmml"><semantics id="S3.p2.1.m1.1a" xref="S3.p2.1.m1.1.cmml"><mi id="S3.p2.1.m1.1.1.m1.1.1" xref="S3.p2.1.m1.1.1.m1.1.1.cmml">k</mi><annotation-xml id="S3.p2.1.m1.1.cmml" encoding="MathML-Content" xref="S3.p2.1.m1.1"><ci id="S3.p2.1.m1.1.1.m1.1.1.cmml" xref="S3.p2.1.m1.1.1.m1.1.1">k</ci></annotation-xml><annotation id="S3.p2.1.m1.1b" encoding="application/x-tex" xref="S3.p2.1.m1.1.cmml">\(k\)</annotation></semantics></math> heads when flipping <math id="S3.p2.1.m2.1" class="ltx_Math" alttext="\(n\)" display="inline" xref="S3.p2.1.m2.1.cmml"><semantics id="S3.p2.1.m2.1a" xref="S3.p2.1.m2.1.cmml"><mi id="S3.p2.1.m2.1.1.m1.1.1" xref="S3.p2.1.m2.1.1.m1.1.1.cmml">n</mi><annotation-xml id="S3.p2.1.m2.1.cmml" encoding="MathML-Content" xref="S3.p2.1.m2.1"><ci id="S3.p2.1.m2.1.1.m1.1.1.cmml" xref="S3.p2.1.m2.1.1.m1.1.1">n</ci></annotation-xml><annotation id="S3.p2.1.m2.1b" encoding="application/x-tex" xref="S3.p2.1.m2.1.cmml">\(n\)</annotation></semantics></math> coins is:</p>
+<table id="S3.Ex4" class="ltx_equation">
+
+<tbody><tr class="ltx_equation ltx_align_baseline">
+<td class="ltx_eqn_pad"></td>
+<td class="ltx_align_center"><math id="S3.Ex4.m1.1" class="ltx_Math" alttext="P(E)={n\choose k}p^{k}(1-p)^{{n-k}}" display="block" xref="S3.Ex4.m1.1.cmml"><semantics id="S3.Ex4.m1.1a" xref="S3.Ex4.m1.1.cmml"><mrow id="S3.Ex4.m1.1.15" xref="S3.Ex4.m1.1.15.cmml"><mrow id="S3.Ex4.m1.1.15.1" xref="S3.Ex4.m1.1.15.1.cmml"><mi id="S3.Ex4.m1.1.1" xref="S3.Ex4.m1.1.1.cmml">P</mi><mo id="S3.Ex4.m1.1.15.1.1" xref="S3.Ex4.m1.1.15.1.1.cmml">⁢</mo><mrow id="S3.Ex4.m1.1.3" xref="S3.Ex4.m1.1.3.cmml"><mo id="S3.Ex4.m1.1.3a" xref="S3.Ex4.m1.1.3.cmml">(</mo><mi id="S3.Ex4.m1.1.3b" xref="S3.Ex4.m1.1.3.cmml">E</mi><mo id="S3.Ex4.m1.1.3c" xref="S3.Ex4.m1.1.3.cmml">)</mo></mrow></mrow><mo id="S3.Ex4.m1.1.5" xref="S3.Ex4.m1.1.5.cmml">=</mo><mrow id="S3.Ex4.m1.1.15.2" xref="S3.Ex4.m1.1.15.2.cmml"><mrow id="S3.Ex4.m1.1.6" xref="S3.Ex4.m1.1.6.cmml"><mo id="S3.Ex4.m1.1.6a" xref="S3.Ex4.m1.1.6.cmml">(</mo><mtable rowspacing="0.2ex" id="S3.Ex4.m1.1.6b" columnspacing="0.4em" xref="S3.Ex4.m1.1.6.cmml"><mtr id="S3.Ex4.m1.1.6c" xref="S3.Ex4.m1.1.6.cmml"><mtd id="S3.Ex4.m1.1.6d" xref="S3.Ex4.m1.1.6.cmml"><mi id="S3.Ex4.m1.1.6.2" xref="S3.Ex4.m1.1.6.2.cmml">n</mi></mtd></mtr><mtr id="S3.Ex4.m1.1.6e" xref="S3.Ex4.m1.1.6.cmml"><mtd id="S3.Ex4.m1.1.6f" xref="S3.Ex4.m1.1.6.cmml"><mi id="S3.Ex4.m1.1.6.3" xref="S3.Ex4.m1.1.6.3.cmml">k</mi></mtd></mtr></mtable><mo id="S3.Ex4.m1.1.6g" xref="S3.Ex4.m1.1.6.cmml">)</mo></mrow><mo id="S3.Ex4.m1.1.15.2.1" xref="S3.Ex4.m1.1.15.2.1.cmml">⁢</mo><msup id="S3.Ex4.m1.1.15.2.2" xref="S3.Ex4.m1.1.15.2.2.cmml"><mi id="S3.Ex4.m1.1.7" xref="S3.Ex4.m1.1.7.cmml">p</mi><mi id="S3.Ex4.m1.1.8.1" xref="S3.Ex4.m1.1.8.1.cmml">k</mi></msup><mo id="S3.Ex4.m1.1.15.2.1a" xref="S3.Ex4.m1.1.15.2.1.cmml">⁢</mo><msup id="S3.Ex4.m1.1.15.2.3" xref="S3.Ex4.m1.1.15.2.3.cmml"><mrow id="S3.Ex4.m1.1.15.2.3.2" xref="S3.Ex4.m1.1.15.2.3.2.cmml"><mo id="S3.Ex4.m1.1.15.2.3.2a" xref="S3.Ex4.m1.1.15.2.3.2.cmml">(</mo><mrow id="S3.Ex4.m1.1.15.2.3.2b" xref="S3.Ex4.m1.1.15.2.3.2.cmml"><mn id="S3.Ex4.m1.1.10" xref="S3.Ex4.m1.1.10.cmml">1</mn><mo id="S3.Ex4.m1.1.11" xref="S3.Ex4.m1.1.11.cmml">-</mo><mi id="S3.Ex4.m1.1.12" xref="S3.Ex4.m1.1.12.cmml">p</mi></mrow><mo id="S3.Ex4.m1.1.15.2.3.2c" xref="S3.Ex4.m1.1.15.2.3.2.cmml">)</mo></mrow><mrow id="S3.Ex4.m1.1.14.1" xref="S3.Ex4.m1.1.14.1.cmml"><mi id="S3.Ex4.m1.1.14.1.1" xref="S3.Ex4.m1.1.14.1.1.cmml">n</mi><mo id="S3.Ex4.m1.1.14.1.2" xref="S3.Ex4.m1.1.14.1.2.cmml">-</mo><mi id="S3.Ex4.m1.1.14.1.3" xref="S3.Ex4.m1.1.14.1.3.cmml">k</mi></mrow></msup></mrow></mrow><annotation-xml id="S3.Ex4.m1.1.cmml" encoding="MathML-Content" xref="S3.Ex4.m1.1"><apply id="S3.Ex4.m1.1.15.cmml" xref="S3.Ex4.m1.1.15"><eq id="S3.Ex4.m1.1.5.cmml" xref="S3.Ex4.m1.1.5"></eq><apply id="S3.Ex4.m1.1.15.1.cmml" xref="S3.Ex4.m1.1.15.1"><times id="S3.Ex4.m1.1.15.1.1.cmml" xref="S3.Ex4.m1.1.15.1.1"></times><ci id="S3.Ex4.m1.1.1.cmml" xref="S3.Ex4.m1.1.1">P</ci><ci id="S3.Ex4.m1.1.3.cmml" xref="S3.Ex4.m1.1.3">E</ci></apply><apply id="S3.Ex4.m1.1.15.2.cmml" xref="S3.Ex4.m1.1.15.2"><times id="S3.Ex4.m1.1.15.2.1.cmml" xref="S3.Ex4.m1.1.15.2.1"></times><apply id="S3.Ex4.m1.1.6.cmml" xref="S3.Ex4.m1.1.6"><csymbol cd="latexml" id="S3.Ex4.m1.1.6.1.cmml">binomial</csymbol><ci id="S3.Ex4.m1.1.6.2.cmml" xref="S3.Ex4.m1.1.6.2">n</ci><ci id="S3.Ex4.m1.1.6.3.cmml" xref="S3.Ex4.m1.1.6.3">k</ci></apply><apply id="S3.Ex4.m1.1.15.2.2.cmml" xref="S3.Ex4.m1.1.15.2.2"><csymbol cd="ambiguous" id="S3.Ex4.m1.1.15.2.2.1.cmml">superscript</csymbol><ci id="S3.Ex4.m1.1.7.cmml" xref="S3.Ex4.m1.1.7">p</ci><ci id="S3.Ex4.m1.1.8.1.cmml" xref="S3.Ex4.m1.1.8.1">k</ci></apply><apply id="S3.Ex4.m1.1.15.2.3.cmml" xref="S3.Ex4.m1.1.15.2.3"><csymbol cd="ambiguous" id="S3.Ex4.m1.1.15.2.3.1.cmml">superscript</csymbol><apply id="S3.Ex4.m1.1.15.2.3.2.cmml" xref="S3.Ex4.m1.1.15.2.3.2"><minus id="S3.Ex4.m1.1.11.cmml" xref="S3.Ex4.m1.1.11"></minus><cn type="integer" id="S3.Ex4.m1.1.10.cmml" xref="S3.Ex4.m1.1.10">1</cn><ci id="S3.Ex4.m1.1.12.cmml" xref="S3.Ex4.m1.1.12">p</ci></apply><apply id="S3.Ex4.m1.1.14.1.cmml" xref="S3.Ex4.m1.1.14.1"><minus id="S3.Ex4.m1.1.14.1.2.cmml" xref="S3.Ex4.m1.1.14.1.2"></minus><ci id="S3.Ex4.m1.1.14.1.1.cmml" xref="S3.Ex4.m1.1.14.1.1">n</ci><ci id="S3.Ex4.m1.1.14.1.3.cmml" xref="S3.Ex4.m1.1.14.1.3">k</ci></apply></apply></apply></apply></annotation-xml><annotation id="S3.Ex4.m1.1b" encoding="application/x-tex" xref="S3.Ex4.m1.1.cmml">P(E)={n\choose k}p^{k}(1-p)^{{n-k}}</annotation></semantics></math></td>
+<td class="ltx_eqn_pad"></td></tr>
+</tbody></table>
+</div>
+
+	<p> 
+			     <table>
+			       <tr>
+				 <td> <math xmls= "http://www.w3.org/1998/Math/MathML" display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>+</mo></mrow><mo>)</mo></mrow></mrow><mo>≡</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mrow><mi>c</mi><mo>+</mo></mrow></mrow></munder><mo>⁡</mo><mrow><mi>f</mi><mo>⁡</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁡</mo><mrow><mo>(</mo><mi>c</mi><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+			       </table>
+			</p>
+
+
+			 	<textarea id="txt1" rows="5" cols="40">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</textarea>
+        </br>
+	<button id="b1" data-clipboard-target="txt1">Copy</button>
+
+</br>
+</br>
 			<p>
 				Donec cursus neque quis eros tristique facilisis molestie sem consectetur. Pellentesque ut tortor erat, non semper nunc. Phasellus et nibh leo, a posuere ante. In laoreet purus vel nulla mattis id placerat enim rhoncus. Duis quam mi, laoreet quis ullamcorper eu, dignissim sit amet odio. Fusce accumsan mollis augue, facilisis vestibulum mi sodales ut. Nullam ligula libero, tempus ut tempus non, vestibulum ac urna. Phasellus faucibus imperdiet urna, et ullamcorper nisi ultrices vel. Etiam mollis est nibh.
 			</p>
@@ -96,33 +127,27 @@
 			<p>
 				Phasellus tempus pharetra nunc ut venenatis. Suspendisse in velit velit. Cras quam tortor, porta nec fermentum sed, varius nec nulla. Praesent imperdiet, nibh nec mattis dignissim, urna elit convallis risus, ac eleifend ipsum enim a dui. Nam at augue enim, placerat bibendum justo. Suspendisse et justo erat. Nullam quam enim, tempor sit amet venenatis eget, aliquet sit amet elit.
 			</p>
-			<p>
-				Maecenas porta commodo pharetra. Vivamus aliquam nunc at elit fermentum nec rhoncus turpis condimentum. Duis ultricies fermentum facilisis. Nunc tempor lacus in mi vestibulum adipiscing. Suspendisse hendrerit feugiat nisi ut eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum turpis in nisl varius elementum in faucibus erat.
-			</p>
-			<p>
-				Curabitur est tellus, gravida nec elementum id, vehicula in elit. Maecenas et dignissim ante. Praesent urna erat, ornare vel ultricies ut, hendrerit nec mauris. Ut molestie vestibulum placerat. Aliquam nisl metus, feugiat et consectetur a, facilisis a tortor. Pellentesque eget porta ante. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sit amet dignissim est. Donec ac velit ligula, et mattis odio. Nunc gravida, risus ut pellentesque dapibus, diam ipsum egestas justo, at dapibus ante felis id sem. In sagittis lorem ut urna facilisis et consectetur ligula sagittis.
-			</p>
-			<p>
-				Cras tempor consectetur adipiscing. Ut laoreet, sapien at porta placerat, purus quam placerat leo, at viverra eros lorem ut erat. Curabitur ultrices ultricies libero non egestas. Fusce et viverra ipsum. Aenean mauris turpis, feugiat id vulputate vel, euismod non purus. Vestibulum quis tortor lectus. Aenean non porta odio. Vestibulum sollicitudin, lorem ac rhoncus vestibulum, felis neque ultrices massa, vitae volutpat nulla dui vitae odio.
-			</p>
-			<p>
-				Maecenas est tortor, molestie non tincidunt in, dictum in magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras lobortis tempus tristique. Praesent nec semper ipsum. Curabitur vel dolor in tellus congue sodales. Praesent id ipsum ipsum. Aenean vel nisl vitae ante gravida placerat quis eget ipsum. Sed a massa non lacus rhoncus sollicitudin. Ut ut magna vel diam luctus mollis quis pharetra urna. Integer nec aliquam est. In convallis rutrum justo a commodo. Proin lectus neque, venenatis vel tristique suscipit, pulvinar a nunc. Nam eros turpis, pellentesque a eleifend vel, posuere id mi. Aliquam consectetur sagittis massa eget suscipit.
-			</p>
-			<p>
-				Proin ornare congue dui, non lacinia metus tempus quis. Donec placerat molestie mollis. Aliquam ullamcorper vulputate dui, sit amet rhoncus felis cursus ut. Vivamus vel luctus nisi. Donec feugiat porttitor nunc aliquet auctor. Quisque tempus volutpat massa, non aliquet lectus adipiscing non. Aenean iaculis mollis enim, nec porta tortor tincidunt a. Aliquam faucibus eros vel orci pulvinar et scelerisque sapien interdum. Cras augue nulla, accumsan a lacinia et, interdum ut nunc. Aliquam rhoncus ultrices urna, sit amet aliquet enim ultricies id. Ut sed nunc lectus, at ultricies nisi.
-			</p>
-			<p>
-				Nulla vestibulum, nunc gravida rhoncus laoreet, elit libero dictum nisi, in varius nunc elit in turpis. Quisque dapibus ante ut elit luctus eu aliquet elit luctus. Duis lacinia lacus a tortor sollicitudin tempus. Proin sagittis magna sit amet sapien porta feugiat ut non felis. Praesent urna mi, tincidunt eu tincidunt dictum, blandit nec ipsum. Cras libero felis, vulputate non eleifend ullamcorper, vehicula vel nibh. Maecenas imperdiet sapien vitae mauris pellentesque quis euismod nisl aliquet. Etiam sed ante magna, a semper sem.
-			</p>
-			<p>
-				Mauris ac accumsan nisi. Fusce consectetur lorem nulla. Pellentesque nec urna nulla, et venenatis ligula. Aliquam sodales, purus non varius laoreet, sem nulla pharetra quam, vel adipiscing enim diam mollis orci. Morbi fermentum est quis elit malesuada placerat. Integer ligula ante, blandit consequat pharetra a, suscipit eget ligula. Ut sagittis facilisis risus, in faucibus diam pharetra quis. Aliquam vehicula blandit neque ac bibendum. Vivamus vestibulum, mi vitae volutpat semper, sapien libero suscipit tellus, ac consequat mi arcu nec dolor. Suspendisse accumsan nulla et diam pharetra mollis aliquet turpis dignissim. Cras ligula tortor, volutpat a varius in, congue eu nunc. Etiam placerat viverra faucibus.
-			</p>
-			<p>
-				Nunc eget magna dolor, malesuada pellentesque leo. Duis varius est eu quam lobortis pharetra. Sed imperdiet pretium eros vel iaculis. Suspendisse neque lorem, tincidunt sit amet consectetur a, faucibus eget risus. Aliquam quis orci felis. Etiam mollis consequat turpis, a accumsan tortor luctus ut. Nam ac neque vitae purus tempor fermentum ac sed sapien. Duis sit amet dapibus ipsum. Mauris pellentesque luctus vehicula. Praesent vehicula semper imperdiet. Nullam mattis facilisis nisl, eget congue erat auctor nec. Phasellus consectetur malesuada nisl, vel rhoncus orci hendrerit eleifend. Pellentesque fermentum nisl a felis accumsan condimentum. Aenean eu molestie tortor. Pellentesque luctus justo sit amet magna volutpat molestie. Suspendisse potenti.
-			</p>
-			<p>
-				Phasellus blandit volutpat dignissim. Aenean condimentum sapien eget nulla tincidunt ultrices. Aenean metus libero, ultrices at facilisis at, facilisis vitae elit. Praesent varius sem eu dui facilisis aliquam auctor ut est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac lorem non augue scelerisque tempor in nec sapien. Morbi in leo lectus, ut feugiat eros.
-			</p>
 		</div>
+			   <script type="text/javascript">
+        window.addEvent("load",function() {
+
+			setTimeout(function() {
+
+				ZeroClipboard.setMoviePath('ZeroClipboard.swf');
+
+				var clip = new ZeroClipboard.Client();
+
+				clip.addEventListener('mousedown',function() {
+					clip.setText(document.getElementById('txt1').value);
+				});
+
+				clip.addEventListener('complete',function(client,text) {
+					alert('copied: ' + text);
+				});
+
+				clip.glue('b1');
+			}, 2000);
+		});
+	   </script>
 	</body>
 </html>

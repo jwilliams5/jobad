@@ -22,7 +22,6 @@
 		<script src="modules/example4.js"></script>
 		<script src="modules/example5.js"></script>
 		<script src="modules/math_clipboard.js"></script>
-	        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
 		<script src="modules/ZoomFeature.js"></script>
 		<script src="modules/url_link.js"></script>
 		
@@ -58,26 +57,12 @@
 		</script>
 		<script type="text/javascript"src="ZeroClipboard.js"></script>
 		<script type="text/javascript">
-        		window.addEvent("load",function() {
-
-			setTimeout(function() {
-
-				ZeroClipboard.setMoviePath('ZeroClipboard.swf');
-
-				var clip = new ZeroClipboard.Client();
-				
-				clip.addEventListener('mousedown',function() {
-					clip.setText(document.getElementById('txt1').value);
-					alert('mouse is down!!');
+        		 $(document).ready(function(){
+				$('button#b1').zclip({
+					path:'ZeroClipboard.swf',
+					copy:$('textarea#txt1').text()
 				});
-
-				clip.addEventListener('complete',function(client,text) {
-					alert('copied: ' + text);
-				});
-
-				clip.glue('b1');
-			}, 2000);
-		});
+     			});
 	   </script>
 	</head>
 	<body>
